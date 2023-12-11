@@ -25,7 +25,11 @@ function App() {
     };
 
     const addTodo = async (newTodo: TodoType) => {
-        setTodos([...todos, newTodo]);
+        if (newTodo.description.trim() !== '') {
+            setTodos([...todos, newTodo]);
+        } else {
+            alert('Das Eingabefeld darf nicht leer sein.');
+        }
     };
 
     const updateTodo = async (id: string, updatedTodo: TodoType) => {
