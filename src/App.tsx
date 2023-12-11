@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import TodoList from './components/TodoList';
 import AddTodoForm from './components/AddTodoForm';
 import { TodoType } from './components/TodoType';
 import './App.css';
+import Header from "./components/Header.tsx";
 
 
 
@@ -47,6 +48,7 @@ function App() {
 
     return (
         <div className="App">
+            <Header />
             <AddTodoForm onNewTodo={addTodo} />
             <TodoList todos={todos} onUpdate={updateTodo} onDelete={deleteTodo} />
         </div>

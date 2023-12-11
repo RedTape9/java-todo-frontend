@@ -23,7 +23,7 @@ function AddTodoForm({ onNewTodo }: Props) {
 
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="input-section">
             <input
                 type="text"
                 value={description}
